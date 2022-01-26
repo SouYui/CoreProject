@@ -13,3 +13,6 @@ C:\Users\Sou Akiyama\OneDrive\Escritorio\Net Core\CoreProject\Persistence\obj\De
 C:\Users\Sou Akiyama\OneDrive\Escritorio\Net Core\CoreProject\Persistence\bin\Debug\net5.0\Domain.dll
 C:\Users\Sou Akiyama\OneDrive\Escritorio\Net Core\CoreProject\Persistence\bin\Debug\net5.0\Domain.pdb
 C:\Users\Sou Akiyama\OneDrive\Escritorio\Net Core\CoreProject\Persistence\obj\Debug\net5.0\Persistence.csproj.CopyComplete
+C:\Users\Sou Akiyama\OneDrive\Escritorio\Net Core\CoreProject\Persistence\bin\Debug\net5.0\Persistence.runtimeconfig.json
+C:\Users\Sou Akiyama\OneDrive\Escritorio\Net Core\CoreProject\Persistence\bin\Debug\net5.0\Persistence.runtimeconfig.dev.json
+C:\Users\Sou Akiyama\OneDrive\Escritorio\Net Core\CoreProject\Persistence\obj\Debug\net5.0\Persistence.genruntimeconfig.cache
