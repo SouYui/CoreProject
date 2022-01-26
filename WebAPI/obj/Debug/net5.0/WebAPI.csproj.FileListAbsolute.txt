@@ -27,3 +27,9 @@ C:\Users\Sou Akiyama\OneDrive\Escritorio\Net Core\CoreProject\WebAPI\obj\Debug\n
 C:\Users\Sou Akiyama\OneDrive\Escritorio\Net Core\CoreProject\WebAPI\obj\Debug\net5.0\ref\WebAPI.dll
 C:\Users\Sou Akiyama\OneDrive\Escritorio\Net Core\CoreProject\WebAPI\obj\Debug\net5.0\WebAPI.pdb
 C:\Users\Sou Akiyama\OneDrive\Escritorio\Net Core\CoreProject\WebAPI\obj\Debug\net5.0\WebAPI.genruntimeconfig.cache
+C:\Users\Sou Akiyama\OneDrive\Escritorio\Net Core\CoreProject\WebAPI\bin\Debug\net5.0\Application.dll
+C:\Users\Sou Akiyama\OneDrive\Escritorio\Net Core\CoreProject\WebAPI\bin\Debug\net5.0\Domain.dll
+C:\Users\Sou Akiyama\OneDrive\Escritorio\Net Core\CoreProject\WebAPI\bin\Debug\net5.0\Persistence.dll
+C:\Users\Sou Akiyama\OneDrive\Escritorio\Net Core\CoreProject\WebAPI\bin\Debug\net5.0\Application.pdb
+C:\Users\Sou Akiyama\OneDrive\Escritorio\Net Core\CoreProject\WebAPI\bin\Debug\net5.0\Domain.pdb
+C:\Users\Sou Akiyama\OneDrive\Escritorio\Net Core\CoreProject\WebAPI\bin\Debug\net5.0\Persistence.pdb
