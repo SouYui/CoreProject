@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Application.Administrators;
+using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -31,6 +33,8 @@ namespace WebAPI
             services.AddDbContext<BellotaContext>( opt => {
                 opt.UseMySQL(Configuration.GetConnectionString("DefaultConnection"));
             } );
+
+            services.AddMediatR(typeof(GetAdministrador.Manejador).Assembly);
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
