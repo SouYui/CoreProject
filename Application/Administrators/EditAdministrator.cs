@@ -4,6 +4,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using MediatR;
 using Persistence;
+using FluentValidation;
 
 namespace Application.Administrators
 {
@@ -13,6 +14,12 @@ namespace Application.Administrators
             public int administradorId { get; set; }
             public string nombre { get; set; }
             public bool? active { get; set; }
+        }
+
+        public class EjecutaValida : AbstractValidator<Ejecuta> {
+            public EjecutaValida() {
+                RuleFor( x => x.nombre ).NotEmpty();
+            }
         }
 
         public class Manejador : IRequestHandler<Ejecuta>

@@ -1,7 +1,9 @@
 using System;
+using System.ComponentModel.DataAnnotations;
 using System.Threading;
 using System.Threading.Tasks;
 using Domain;
+using FluentValidation;
 using MediatR;
 using Persistence;
 
@@ -10,8 +12,16 @@ namespace Application.Administrators
     public class NewAdministrador
     {
         public class Ejecuta : IRequest {
+            //[Required(ErrorMessage="Por favor ingrese el nombre del administrador.")]
             public string nombre { get; set; }
             public bool active { get; set; }
+        }
+
+        public class EjecutaValida : AbstractValidator<Ejecuta> {
+            public EjecutaValida() {
+                RuleFor( x => x.nombre ).NotEmpty();
+                RuleFor( x => x.active ).NotEmpty();
+            }
         }
 
         public class Manejador : IRequestHandler<Ejecuta>
