@@ -29,5 +29,10 @@ namespace WebAPI.Controllers
             return await _mediator.Send(new GetAdministradorId.Ejecuta{ administradorId = id });
         }
 
+        [HttpPost]
+        public async Task<ActionResult<Unit>> CrearAdministrador(NewAdministrador.Ejecuta data) {
+            return await _mediator.Send(data);
+        }
+
     }
 }
