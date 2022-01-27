@@ -23,5 +23,11 @@ namespace WebAPI.Controllers
             return await _mediator.Send(new GetAdministrador.ListaAdministradores());
         }
 
+        // http://localhost:5000/api/Administrador/9
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Administrador>> GetAdministrador(int id) {
+            return await _mediator.Send(new GetAdministradorId.Ejecuta{ administradorId = id });
+        }
+
     }
 }
