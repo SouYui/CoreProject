@@ -39,5 +39,10 @@ namespace WebAPI.Controllers
             data.administradorId = id;
             return await _mediator.Send(data);
         }
+
+        [HttpDelete("{id}")]
+        public async Task<ActionResult<Unit>> EliminarAdministrador(int id) {
+            return await _mediator.Send(new DeleteAdministrator.Ejecuta{ administradorId = id });
+        }
     }
 }
