@@ -1,5 +1,7 @@
+using System.Net;
 using System.Threading;
 using System.Threading.Tasks;
+using Application.ManejadorError;
 using Domain;
 using MediatR;
 using Persistence;
@@ -23,6 +25,10 @@ namespace Application.Administrators
             public async Task<Administrador> Handle(Ejecuta request, CancellationToken cancellationToken)
             {
                 var administrador = await _context.Administrador.FindAsync(request.administradorId);
+                if(administrador == null) {
+                    throw new ErrorHandler(HttpStatusCode.NotFound, new { message = "No se encontró al administrador." });
+                }
+                
                 return administrador;
             }
         }

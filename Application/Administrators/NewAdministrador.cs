@@ -1,7 +1,9 @@
 using System;
 using System.ComponentModel.DataAnnotations;
+using System.Net;
 using System.Threading;
 using System.Threading.Tasks;
+using Application.ManejadorError;
 using Domain;
 using FluentValidation;
 using MediatR;
@@ -46,7 +48,7 @@ namespace Application.Administrators
                     return Unit.Value;
                 }
 
-                throw new Exception("No se pudo insertar el Administrador");
+                throw new ErrorHandler(HttpStatusCode.BadRequest, new { message = "No se pudo crear un nuevo registro de administrador." });
             }
         }
     }

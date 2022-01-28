@@ -1,6 +1,8 @@
+using System.Net;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
+using Application.ManejadorError;
 using MediatR;
 using Persistence;
 
@@ -24,7 +26,8 @@ namespace Application.Administrators
             {
                 var administrador = await _context.Administrador.FindAsync(request.administradorId);
                 if (administrador == null) {
-                    throw new Exception("El administrador solicitado no existe.");
+                    // throw new Exception("El administrador solicitado no existe.");
+                    throw new ErrorHandler(HttpStatusCode.NotFound, new { message = "No se encontró al administrador." });
                 }
 
                 _context.Remove(administrador);
@@ -34,7 +37,7 @@ namespace Application.Administrators
                     return Unit.Value;
                 }
 
-                throw new Exception("No se pudo eliminar al administrador");
+                throw new ErrorHandler(HttpStatusCode.BadRequest, new { message = "No se pudo eliminar al administrador"});
             }
         }
     }

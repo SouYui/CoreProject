@@ -5,6 +5,8 @@ using System.Threading.Tasks;
 using MediatR;
 using Persistence;
 using FluentValidation;
+using Application.ManejadorError;
+using System.Net;
 
 namespace Application.Administrators
 {
@@ -34,7 +36,7 @@ namespace Application.Administrators
             {
                 var administrador = await _context.Administrador.FindAsync(request.administradorId);
                 if(administrador == null) {
-                    throw new Exception("El administrador solicitado no existe.");
+                    throw new ErrorHandler(HttpStatusCode.NotFound, new { message = "No se encontró al administrador." });
                 }
 
                 administrador.nombre = request.nombre ?? administrador.nombre;
@@ -46,7 +48,7 @@ namespace Application.Administrators
                     return Unit.Value;
                 }
 
-                throw new Exception("No se pudo editar el administrador.");
+                throw new ErrorHandler(HttpStatusCode.BadRequest, new { message = "No se pudo editar al administrador" });
             }
         }
     }
