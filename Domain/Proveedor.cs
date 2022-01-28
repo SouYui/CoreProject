@@ -12,6 +12,7 @@ namespace Domain
         public string rfc { get; set; }
         public string clabe { get; set; }
         public string cuenta { get; set; }
+        public ICollection<Producto> ProductoProveedor { get; set; }
         public ICollection<Inventario> ProductoInventario { get; set; }
     }
 }

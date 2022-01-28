@@ -5,7 +5,7 @@ namespace Domain
     {
         public int inventarioId { get; set; }
         public int productoId { get; set; } 
-        // Ancla a producto
+        public Producto Producto { get; set; }
         public int sucursalId { get; set; }
         public Sucursal Sucursal { get; set; }
         public int cantidad { get; set; }
